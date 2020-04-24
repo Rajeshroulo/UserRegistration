@@ -2,8 +2,8 @@
 
 namepat="^[A-Z]{1}[a-z]{2,}$"
 emailpat="^[0-9a-zA-Z]+([._+-][0-9a-zA-Z]+)*@[0-9a-zA-Z]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2})$"
-phonepat="^[1-9]{2}[0-9]{10}$"
-
+phonepat="^[0-9]{2}[0-9]{10}$"
+passwordpat="^[0-9a-zA-Z]{3,}+@[0-9a-zA-Z]$"
 read -p "Enter the phoneno:" number
 
 if [[ $number=~$phonepat ]]
@@ -27,5 +27,8 @@ tocheckvalidation $name $namepat
 
 read -p "Enter the mail:" mail
 tocheckvalidation $mail $emailpat
+
+read -p "Enter the password:" password
+tocheckvalidation $password $passwordpat
 
 

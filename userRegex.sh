@@ -1,9 +1,10 @@
 #!/bin/bash -x
 
-namepat="^[A-Z]{1}[a-z]{2,}$"
-emailpat="^[0-9a-zA-Z]+([._+-][0-9a-zA-Z]+)*@[0-9a-zA-Z]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2})$"
+namepat="^[A-Z][a-z]{3,}$"
+emailpat="^[0-9a-zA-Z]+([._+-][0-9a-zA-Z])*@[0-9a-zA-Z]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2})$"
 phonepat="^[0-9]{2}[0-9]{10}$"
-passwordpat="^[0-9a-zA-Z]{3,}+@[0-9a-zA-Z]$"
+passwordpat="^[0-9a-zA-Z]+[@#%&*][0-9a-zA-Z]{8,}$"
+
 read -p "Enter the phoneno:" number
 
 if [[ $number=~$phonepat ]]
